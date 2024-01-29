@@ -55,6 +55,5 @@ public class QrCode extends AppCompatActivity {
         });
 
         wv.loadUrl(URL);
-        setContentView(wv);
     }
 }

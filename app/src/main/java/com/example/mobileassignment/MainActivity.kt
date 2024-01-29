@@ -36,12 +36,13 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onAuthenticationSucceeded(
                     result: BiometricPrompt.AuthenticationResult) {
+                    goQrCodePage()
                     super.onAuthenticationSucceeded(result)
                     Toast.makeText(applicationContext,
                         "Authentication succeeded!", Toast.LENGTH_SHORT)
                         .show()
 
-                    goQrCodePage()
+
                 }
 
                 override fun onAuthenticationFailed() {
@@ -64,7 +65,12 @@ class MainActivity : AppCompatActivity() {
         biometricLoginButton.setOnClickListener {
             biometricPrompt.authenticate(promptInfo)
         }
+    }
 
+    private fun goQrCodePage() {
+        val intent = Intent(this, Home::class.java)
+//        intent.putExtra("key", value)
+        startActivity(intent)
     }
 
     override fun onResume() {
@@ -84,11 +90,4 @@ class MainActivity : AppCompatActivity() {
                 biometricStatusTextView.text = "Biometric features are not enrolled."
         }
     }
-
-    fun goQrCodePage() {
-        val intent = Intent(this, QrCode::class.java)
-//        intent.putExtra("key", value)
-        startActivity(intent)
-    }
-
 }
