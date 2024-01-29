@@ -35,7 +35,8 @@
         android:layout_marginStart="111dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="111dp"
-        android:text="Generate" />
+        android:text="Generate"
+        />
 
     <WebView
         android:id="@+id/qr_code"
@@ -46,29 +47,28 @@
     <TextView
         android:id="@+id/empty3"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/qr_code"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/empty3"
+        android:text="Your last login time is "
+        android:textColor="@color/black"
         android:textAlignment="center"
         />
 
     <TextView
         android:id="@+id/hint1"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/empty3"
-        android:text="Your last login time is 29-Jan-2024"
-        android:textColor="@color/black"
+        android:layout_marginTop="28dp"
+        android:text="15/01/2024"
         android:textAlignment="center"
-        />
-
-    <TextView
-        android:id="@+id/hint2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/hint1"
-        android:text="You Generated QR code 1 times"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        />
+        android:textColor="@color/black" />
 
 </RelativeLayout>
