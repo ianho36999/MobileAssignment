@@ -1,5 +1,6 @@
 package com.example.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -39,7 +40,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,
                         "Authentication succeeded!", Toast.LENGTH_SHORT)
                         .show()
-                    
+
+                    goQrCodePage()
                 }
 
                 override fun onAuthenticationFailed() {
@@ -81,6 +83,12 @@ class MainActivity : AppCompatActivity() {
                 // Prompts the user to create credentials that your app accepts.
                 biometricStatusTextView.text = "Biometric features are not enrolled."
         }
+    }
+
+    fun goQrCodePage() {
+        val intent = Intent(this, QrCode::class.java)
+//        intent.putExtra("key", value)
+        startActivity(intent)
     }
 
 }
