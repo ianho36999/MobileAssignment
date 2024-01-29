@@ -49,4 +49,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint"/>
 
+    <TextView
+        android:id="@+id/emptyBox999"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/emptyBox999"
+        android:text="Shop address: 30 Shing Tai Road, Chai Wan, Hong Kong"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
