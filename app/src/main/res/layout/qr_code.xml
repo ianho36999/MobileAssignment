@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    tools:context=".QrCode">
+    tools:context=".QrCode"
+    android:background="#FCF3CF">
 
     <TextView
         android:id="@+id/empty"
@@ -41,5 +42,33 @@
         android:layout_width="match_parent"
         android:layout_height="380dp"
         android:layout_below="@+id/button" />
+
+    <TextView
+        android:id="@+id/empty3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/qr_code"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/hint1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/empty3"
+        android:text="Your last login time is 29-Jan-2024"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/hint2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/hint1"
+        android:text="You Generated QR code 1 times"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
 
 </RelativeLayout>
