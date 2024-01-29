@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext,
                         "Authentication succeeded!", Toast.LENGTH_SHORT)
                         .show()
+                    
                 }
 
                 override fun onAuthenticationFailed() {
